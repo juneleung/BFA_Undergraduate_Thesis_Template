@@ -1,0 +1,178 @@
+\usepackage[left=3.17cm, right=3.17cm, top=2.54cm, bottom=2.54cm]{geometry} %页边距
+% \CTEXsetup[format={\Large\bfseries}]{section} %设置章标题字号为Large，居左
+%\CTEXsetup[number={\chinese{section}}]{section}
+%\CTEXsetup[name={（,）}]{subsection}
+%\CTEXsetup[number={\chinese{subsection}}]{subsection}
+%\CTEXsetup[name={（,）}]{subsubsection}
+%\CTEXsetup[number=\arabic{subsubsection}]{subsubsection}  %以上四行为各级标题样式设置，可根据需要做修改
+%\linespread{1.5} %设置全文行间距
+ 
+%\usepackage[english]{babel}
+%\usepackage{float}     %放弃美学排版图表
+\usepackage{ctex}   
+\usepackage{fontspec}   %修改字体.
+\usepackage{amsmath, amsfonts, amssymb} % 数学公式相关宏包
+\usepackage{color}      % color content
+\usepackage{graphicx}   % 导入图片
+\usepackage{subfigure}  % 并排子图
+\usepackage{url}        % 超链接
+\usepackage{bm}         % 加粗部分公式，比如\bm{aaa}aaa
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{epstopdf}
+\usepackage{epsfig}
+\usepackage{longtable}  %长表格
+\usepackage{supertabular}%跨页表格
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{changepage}
+\usepackage{times}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{mathpazo}
+\usepackage{pgfplots}
+\usepackage{url}
+\usepackage{pifont}
+\usepackage[perpage]{footmisc}
+\usepackage{microtype}
+\usepackage{scrextend}
+\usepackage{cite}
+\usepackage{titletoc}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lineno}
+\usepackage{indentfirst}
+
+\pagestyle{plain}
+\fancyfoot[C]{\thepage}
+
+% -- Code Format --
+\definecolor{CPPLight}  {HTML} {686868}
+\definecolor{CPPSteel}  {HTML} {888888}
+\definecolor{CPPDark}   {HTML} {262626}
+\definecolor{CPPBlue}   {HTML} {4172A3}
+\definecolor{CPPGreen}  {HTML} {487818}
+\definecolor{CPPBrown}  {HTML} {A07040}
+\definecolor{CPPRed}    {HTML} {AD4D3A}
+\definecolor{CPPViolet} {HTML} {7040A0}
+\definecolor{CPPGray}  {HTML} {B8B8B8}
+\lstset{
+    columns=fixed,       
+    numbers=left,  %  none，left                          % 在左侧显示行号
+    frame=none,                                          % 不显示背景边框
+    backgroundcolor=\color[RGB]{245,245,244},            % 设定背景颜色
+    keywordstyle=\color[RGB]{40,40,255},                 % 设定关键字颜色
+    numberstyle=\footnotesize\color[RGB]{255,0,0},       % 设定行号格式
+    commentstyle=\it\color[RGB]{0,96,96},                % 设置代码注释的格式
+    stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},   % 设置字符串格式
+    showstringspaces=false,                              % 不显示字符串中的空格
+    language=c++,                                        % 设置语言
+    morekeywords={alignas,continute,friend,register,true,alignof,decltype,goto,
+    reinterpret_cast,try,asm,defult,if,return,typedef,auto,delete,inline,short,
+    typeid,bool,do,int,signed,typename,break,double,long,sizeof,union,case,
+    openvdb,FloatGrid,Ptr,Coord,Accessor,FloatTree,math,Transform,
+    dynamic_cast,mutable,static,unsigned,catch,else,namespace,static_assert,using,
+    char,enum,new,static_cast,virtual,char16_t,char32_t,explict,noexcept,struct,
+    void,export,nullptr,switch,volatile,class,extern,operator,template,wchar_t,
+    const,false,private,this,while,constexpr,float,protected,thread_local,
+    const_cast,for,public,throw,std},
+    emph={map,set,multimap,multiset,unordered_map,unordered_set,
+    unordered_multiset,unordered_multimap,vector,string,list,deque,
+    array,stack,forwared_list,iostream,memory,shared_ptr,unique_ptr,
+    random,bitset,ostream,istream,cout,cin,endl,move,default_random_engine,
+    uniform_int_distribution,iterator,algorithm,functional,bing,numeric,},
+    emphstyle=\color{CPPViolet}, 
+}
+
+% -- CHN Font --
+% mac 
+% \setCJKmainfont{Songti SC}   % 宋体
+% \setCJKfamilyfont{song}{Songti SC}[AutoFakeBold]
+% \setCJKfamilyfont{kai}{Kaiti SC}[AutoFakeBold]
+% \setCJKfamilyfont{hei}{STHeiti}
+% \setCJKfamilyfont{fsong}{STFangsong}[AutoFakeBold]
+% \newcommand{\song}{\CJKfamily{song}}
+% \newcommand{\kai}{\CJKfamily{kai}}
+% \newcommand{\hei}{\CJKfamily{hei}}
+% \newcommand{\fsong}{\CJKfamily{fsong}}
+
+\setCJKfamilyfont{song}[Path={font/},AutoFakeBold]{simsun.ttc}
+\newcommand{\song}{\CJKfamily{song}} 
+
+\setCJKfamilyfont{kai}[Path={font/},AutoFakeBold]{simkai.ttf}
+\newcommand{\kai}{\CJKfamily{kai}} 
+
+\setCJKfamilyfont{hei}[Path={font/},AutoFakeBold]{simhei.ttf}
+\newcommand{\hei}{\CJKfamily{hei}} 
+
+\setCJKfamilyfont{fsong}[Path={font/},AutoFakeBold]{simfang.ttf}
+\newcommand{\fsong}{\CJKfamily{fsong}} 
+
+
+% -- ENG Font --
+\setmainfont{Times New Roman}
+\newcommand{\TimesNR}{Times New Roman}
+
+% -- 摘要 目录 --
+\renewcommand\contentsname{\zihao{-2}\hei{目\qquad 录}}
+% \renewcommand\listfigurename{插图目录}
+% \renewcommand\listtablename{表格目录}
+% \renewcommand\refname{参考文献}
+% \renewcommand\indexname{索引}
+% \renewcommand\figurename{图}
+% \renewcommand\tablename{表}
+% \renewcommand\abstractname{摘要}
+% \renewcommand\partname{部分}
+% \renewcommand\appendixname{附录}
+% \renewcommand\today{\number\year年\number\month月\number\day日}
+\renewcommand\algorithm{算法}
+
+
+% -- Footnote Format --
+\renewcommand{\footnotesize}{\fontsize{9pt}{11pt}\selectfont}
+
+% -- Cite Format --
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+
+
+
+% -- ContentTable Format --
+\titlecontents{section}
+        [1em]
+        {\zihao{4}\hei}
+        {\contentslabel{1em}}
+        {\hspace*{-1em}}
+        {~\titlerule*[0.6pc]{$.$}~\contentspage}
+
+\titlecontents{subsection}
+        [3em]
+        {\zihao{4}\hei}
+        {\contentslabel{1.5em}}
+        {\hspace*{-1.5em}}
+        {~\titlerule*[0.6pc]{$.$}~\contentspage}
+
+\titlecontents{subsubsection}
+        [5em]
+        {\zihao{-4}\hei}
+        {\contentslabel{2.5em}}
+        {\hspace*{-2.5em}}
+        {~\titlerule*[0.6pc]{$.$}~\contentspage}
+
+
+% -- Section Format --
+\CTEXsetup[name={,.}]{section}
+\titleformat*{\section}{\hei\zihao{3}\centering}
+\titleformat*{\subsection}{\hei\zihao{-3}}
+\titleformat*{\subsubsection}{\hei\zihao{4}}
+\titleformat*{\paragraph}{\song}
+
+
+
+\renewcommand{\thefootnote}{\ding{\numexpr171+\value{footnote}}}
+\deffootnote[1.5em]{1.5em}{1em}{\thefootnotemark\space}
+ 
